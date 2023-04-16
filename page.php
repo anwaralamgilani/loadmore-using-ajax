@@ -1,29 +1,5 @@
 <?php get_header(); ?>
 
-<script src="https://kit.fontawesome.com/66eb86052a.js" crossorigin="anonymous"></script>
-
-<main class="container">
-<?php while (have_posts()) : the_post(); ?>
-	<?php $img_url = get_field('page_banner', get_the_ID()); ?>
-		<?php if($img_url){ ?>
-			<div class="best-items-banner-bg lazyloaded" data-bg="<?PHP echo $img_url["url"]; ?>" style="background-image: url(<?PHP echo $img_url["url"]; ?>);">
-				<div class="best-items-banner-bg-text">
-					<h1 class="banner-bg-title"><?php the_title(); ?></h1>
-				</div>
-			</div>
-		<?php }?>
-		<section class="row">
-			<div class="col-sm-10" style="margin: 0 auto;">
-				<div class="row">
-					<div class="container">
-						
-						<?php the_content(); ?>
-					
-					</div>
-				</div>
-			</div>
-		</section>
-<?php endwhile; ?>
 <div class="annoucement-cards-wrap video-gallery-wrap">
 	<h2 class="new-home-section-heading text-center">Video gallery</h2>		
 	<div id="photo-gallery">
